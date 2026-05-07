@@ -1,19 +1,23 @@
-import dotenv from "dotenv"
-import connectDB from "./db/index.js";
-import {app} from "./app.js";
 
-dotenv.config(
-    {
-    path:"./.env"
-}
-);
+// Everything moved to server.js file as that is entry point
 
-connectDB()
-.then(()=>{
-    app.listen(process.env.PORT|| 8000,()=>[
-        console.log(`Server is running on PORT: ${process.env.PORT}`)
-    ])
-})
-.catch((err)=>[
-    console.log("DB connection failed",err)
-])
+
+// import dotenv from "dotenv"
+// import connectDB from "./db/index.js";
+// import {app} from "./app.js";
+
+// dotenv.config(
+//     {
+//     path:"./.env"
+// }
+// );
+
+// connectDB()
+// .then(()=>{
+//     app.listen(process.env.PORT|| 8000,()=>[
+//         console.log(`Server is running on PORT: ${process.env.PORT}`)
+//     ])
+// })
+// .catch((err)=>[
+//     console.log("DB connection failed",err)
+// ])
